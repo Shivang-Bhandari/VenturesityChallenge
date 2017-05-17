@@ -1,4 +1,20 @@
-<section>
-  <p ng-repeat="jsonOutput in formFields">{{jsonOutput.component}}</p>
+<!--<section>-->
+  <!--<div class="container" >-->
 
+    <!--<label ng-repeat="jsonOutput in formFields" ng-if="jsonOutput.component=='textinput'" for={{jsonOutput.label}} >-->
+      <!--{{jsonOutput.label}}-->
+    <!--</label>-->
+  <!--</div>-->
+
+<!--</section>-->
+<div class="container center">
+<section  ng-repeat="jsonOutput in formFields" ng-if="jsonOutput.component=='textinput'">
+  <!--{{jsonOutput.label}} :-->
+  <div class="input-field">
+    <input id={{jsonOutput.label}} type="text" >
+    <label for={{jsonOutput.label}}>{{jsonOutput.label}}</label>
+  </div>
 </section>
+
+  </div>
+</div>
