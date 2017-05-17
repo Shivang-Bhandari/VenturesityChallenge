@@ -4,14 +4,13 @@
  * @ngdoc function
  * @name venturesityApp.controller:MainCtrl
  * @description
- * # MainCtrl
+ * # getRequest
  * Controller of the venturesityApp
  */
 angular.module('venturesityApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('getRequest', function ($scope, $http) {
+    $http.get('http://randomform.herokuapp.com')
+      .then(function(response) {
+        $scope.jsonOutput = response.data;
+      });
   });
