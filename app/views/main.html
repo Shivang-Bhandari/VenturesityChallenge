@@ -1,10 +1,10 @@
-<!--<section>-->
-  <!--<div class="container" >-->
+<!--&lt;!&ndash;<section>&ndash;&gt;-->
+  <!--&lt;!&ndash;<div class="container" >&ndash;&gt;-->
 
-    <!--<label ng-repeat="jsonOutput in formFields" ng-if="jsonOutput.component=='textinput'" for={{jsonOutput.label}} >-->
-      <!--{{jsonOutput.label}}-->
-    <!--</label>-->
-  <!--</div>-->
+    <!--&lt;!&ndash;<label ng-repeat="jsonOutput in formFields" ng-if="jsonOutput.component=='textinput'" for={{jsonOutput.label}} >&ndash;&gt;-->
+      <!--&lt;!&ndash;{{jsonOutput.label}}&ndash;&gt;-->
+    <!--&lt;!&ndash;</label>&ndash;&gt;-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
 
 <!--</section>-->
 <div class="container center">
@@ -15,8 +15,9 @@
     <input id={{jsonOutput.label}} type="text" value="{{jsonOutput.autofill}}">
     <label for={{jsonOutput.label}}>{{jsonOutput.label}}</label>
   </div>
-  
+
 </section>
 
   </div>
 </div>
+<a class="waves-effect waves-light btn" ng-click="jsonCall()">Get JSON</a>

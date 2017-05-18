@@ -1,5 +1,6 @@
 'use strict';
 
+
 /**
  * @ngdoc function
  * @name venturesityApp.controller:MainCtrl
@@ -10,11 +11,13 @@
 angular.module('venturesityApp')
   .controller('getRequest', function ($scope, $http) {
     $scope.formFields='';
-    $http.get('http://randomform.herokuapp.com')
-      .then(function(response) {
+    $scope.jsonCall = function() {
+      $http.get('http://randomform.herokuapp.com')
+        .then(function(response) {
+          $scope.formFields = response.data.data.form_fields;
+          console.log(response.data.data.form_fields);
+        });
+    };
 
-         //$scope.formFields = response.data.form_fields;
-         $scope.formFields = response.data.data.form_fields;
-
-      });
   });
+
