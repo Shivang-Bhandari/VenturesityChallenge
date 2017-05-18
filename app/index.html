@@ -23,13 +23,17 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo center thin">VENTURESITY</a>
 
-      </div>
-    </nav>
-    <main>
+    <header style="background-image: linear-gradient(160deg, #02ccba 0, #4aabc2 100%);">
+      <nav style="background-color: rgba(0,0,0,0.4);opacity:0.4;">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo center thin">VENTURESITY</a>
+
+        </div>
+      </nav>
+    </header>
+
+    <main class="bg">
       <div ng-include="'views/main.html'" ng-controller="getRequest">
 
         </div>
@@ -37,8 +41,8 @@
 
 
 
-    <footer class="page-footer" style="padding-top: 0;">
-      <div class="footer-copyright">
+    <footer class="page-footer" style="padding-top: 0;background-image: linear-gradient(160deg, #02ccba 0, #4aabc2 100%);">
+      <div class="footer-copyright" style="background-color: rgba(0,0,0,0.4);opacity:0.4;">
         <div class="container center">
           From <span class="glyphicon glyphicon-heart"></span> by Grim
         </div>
@@ -60,7 +64,11 @@
   <script type="text/javascript">
     $(document).ready(function() {
       Materialize.updateTextFields();
-    });  </script>
+
+    });
+
+
+  </script>
 
 </body>
 </html>

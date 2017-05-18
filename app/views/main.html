@@ -1,23 +1,39 @@
-<!--&lt;!&ndash;<section>&ndash;&gt;-->
-  <!--&lt;!&ndash;<div class="container" >&ndash;&gt;-->
+<div class="container center card form">
 
-    <!--&lt;!&ndash;<label ng-repeat="jsonOutput in formFields" ng-if="jsonOutput.component=='textinput'" for={{jsonOutput.label}} >&ndash;&gt;-->
-      <!--&lt;!&ndash;{{jsonOutput.label}}&ndash;&gt;-->
-    <!--&lt;!&ndash;</label>&ndash;&gt;-->
-  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+  <form>
+    <!--section for text inputs-->
 
-<!--</section>-->
-<div class="container center">
-  <!--section for text inputs-->
-<section  ng-repeat="jsonOutput in formFields">
-  {{jsonOutput.description}}
-  <div class="input-field inline" ng-if="jsonOutput.component=='textinput'">
-    <input id={{jsonOutput.label}} type="text" value="{{jsonOutput.autofill}}">
-    <label for={{jsonOutput.label}}>{{jsonOutput.label}}</label>
-  </div>
+    <section ng-repeat="jsonOutput in formFields" class="card-content">
+      {{jsonOutput.description}}
+      <div class="input-field inline" ng-if="jsonOutput.component=='textinput'">
+        <input id={{jsonOutput.label}} type="text" value="{{jsonOutput.autofill}}">
+        <label class="active" for={{jsonOutput.label}}>{{jsonOutput.label}}</label>
+      </div>
 
-</section>
+      <div ng-if="jsonOutput.component=='checkbox'" class="center inline">
+        <input type="checkbox" id="{{jsonOutput.label}}" />
+        <label for="{{jsonOutput.label}}">{{jsonOutput.label}}</label>
+      </div>
 
-  </div>
+      <div ng-if="jsonOutput.component=='radio'" class="center inline" ng-repeat="option in jsonOutput.Options">
+        <input type="radio" id="{{jsonOutput.label}}" name="{{option}}" />
+        <label for="{{jsonOutput.label}}">{{jsonOutput.label}}</label>
+      </div>
+    </section>
+
+
+  </form>
+
+
+
+  <a class="waves-effect waves-light btn" ng-click="jsonCall()">Get JSON</a>
+
+  <a class="waves-effect waves-light btn" id="postBtn" ng-click="dataPost()">Post Form</a>
+
+
+  <script type="text/javascript">
+    $('#postBtn').click(function () {
+      Materialize.toast('Form Posted', 3000, 'rounded') // 'rounded' is the class I'm applying to the toast
+    });
+  </script>
 </div>
-<a class="waves-effect waves-light btn" ng-click="jsonCall()">Get JSON</a>
