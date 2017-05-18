@@ -8,12 +8,14 @@
 
 <!--</section>-->
 <div class="container center">
-<section  ng-repeat="jsonOutput in formFields" ng-if="jsonOutput.component=='textinput'">
-  <!--{{jsonOutput.label}} :-->
-  <div class="input-field">
-    <input id={{jsonOutput.label}} type="text" >
+  <!--section for text inputs-->
+<section  ng-repeat="jsonOutput in formFields">
+  {{jsonOutput.description}}
+  <div class="input-field inline" ng-if="jsonOutput.component=='textinput'">
+    <input id={{jsonOutput.label}} type="text" value="{{jsonOutput.autofill}}">
     <label for={{jsonOutput.label}}>{{jsonOutput.label}}</label>
   </div>
+  
 </section>
 
   </div>
