@@ -38,5 +38,7 @@ angular.module('venturesityApp')
         });
     };
 
+    $scope.update = angular.copy.person;
+
   });
 

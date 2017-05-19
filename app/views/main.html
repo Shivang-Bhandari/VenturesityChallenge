@@ -11,12 +11,12 @@
       <!--Textinput-->
 
       <div class="input-field" ng-if="jsonOutput.component=='textinput'">
-        <input id={{jsonOutput.label}} type="text" value="{{jsonOutput.autofill}}">
+        <input id={{jsonOutput.label}} type="text" value="{{jsonOutput.autofill}}" ng-model="form.{{jsonOutput.label}}">
         <label class="active" for={{jsonOutput.label}}>{{jsonOutput.label}}</label>
       </div>
 
       <!--Checkboxes-->
-      <div ng-if="jsonOutput.component=='checkbox'" class="align-left inline" ng-repeat="option in jsonOutput.options">
+      <div ng-if="jsonOutput.component=='checkbox'" class="align-left inline" ng-repeat="option in jsonOutput.options" >
         <input type="checkbox" id="{{jsonOutput.label+option}}" name="{{option}}" />
         <label for="{{jsonOutput.label+option}}">{{option}}</label>
       </div>

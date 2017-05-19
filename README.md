@@ -12,3 +12,9 @@ version 0.16.0.
 ## Build & development :
 
 Run `grunt` for building and `grunt serve` for preview.
+
+
+## Usage :
+
+1. Click on Get JSON button to load a new Form.
+2. Click on The Fixed Action Button to Upload it
