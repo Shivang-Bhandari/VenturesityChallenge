@@ -43,14 +43,18 @@
 
 
   </form>
-<!--Buttons-->
+
+
+<!--get button-->
   <section class="center container">
     <a class="waves-effect waves-light btn" ng-click="jsonCall()">Get JSON</a>
   </section>
 
 </div>
+
+<!--post button-->
 <div class="fixed-action-btn" style="opacity: 1;">
-  <a class="waves-effect waves-light btn-floating green" id="postBtn" ng-controller="postForm" ng-click="dataPost()"><i class="material-icons">publish</i></a>
+  <a class="waves-effect waves-light btn-floating btn-large red" id="postBtn" ng-click="dataPost()"><i class="material-icons">publish</i></a>
 </div>
 
 <script type="text/javascript">
